@@ -39,7 +39,6 @@ let currentButton = null; // Track the current play/pause button
 let isPlaying = false; // Track the play/pause state
 let progressInterval = null; // Track the progress update interval
 
-// Function to create the song list dynamically
 function createSongList() {
     const songList = document.getElementById('songList');
 
@@ -69,7 +68,6 @@ function createSongList() {
     });
 }
 
-// Function to play/pause the audio
 function playPauseAudio(index, button) {
     if (currentAudio && currentAudio.id === `audio${index}` && isPlaying) {
         // If the current audio is already playing, pause it
@@ -126,5 +124,4 @@ function getFileName(fullPath) {
     return fileName.replace(/\.[^/.]+$/, "");
 }
 
-// Initialize the song list after the page is loaded
 window.onload = createSongList;
