@@ -1,0 +1,175 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-size: 1.2rem;
+    /* Default font size for headings */
+}
+
+td {
+    font-size: 1rem;
+    /* Default font size for table data */
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+.flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.icon {
+    color: #333;
+}
+
+.btn {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Responsive Design */
+
+/* For screens less than or equal to 768px */
+@media screen and (max-width: 768px) {
+
+    th,
+    td {
+        font-size: 1rem;
+        /* Reduce font size for medium screens */
+        padding: 15px;
+    }
+
+    .btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .sticky {
+        font-size: 1rem;
+        /* Adjust sticky footer font size */
+        padding: 8px;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    /* Adjust text content for smaller screens */
+    body {
+        font-size: 14px;
+        /* Reduce the body text font size */
+    }
+}
+
+/* For screens less than or equal to 480px (smaller devices like smartphones) */
+@media screen and (max-width: 480px) {
+
+    th,
+    td {
+        font-size: 0.9rem;
+        /* Further reduce font size */
+        padding: 10px;
+    }
+
+    .btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sticky {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    body {
+        font-size: 12px;
+        /* Further reduce font size for better readability on mobile */
+    }
+}
+
+/* For screens less than or equal to 320px (very small screens) */
+@media screen and (max-width: 320px) {
+    .btn {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sticky {
+        font-size: 0.8rem;
+        padding: 3px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    body {
+        font-size: 10px;
+        /* Minimized text size for ultra-small devices */
+    }
+
+    /* Stack table cells vertically on small screens */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
